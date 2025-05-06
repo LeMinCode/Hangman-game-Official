@@ -25,7 +25,7 @@ void init() {
         int x = startX + col * (KeyWidth + gapX);
         int y = startY + row * (KeyHeight + gapY);
 
-        SDL_Rect KeyRect = { x, y, KeyWidth, KeyHeight };
+        SDL_Rect KeyRect = {x, y, KeyWidth, KeyHeight};
         Keys.push_back(KeyRect);
         KeyLetters.push_back(letters[i]);
         KeyPressed.push_back(false);
