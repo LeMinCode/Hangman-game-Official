@@ -123,7 +123,7 @@ bool PlayGame(Graphics& graphics) {
 
             if (e.type == SDL_MOUSEBUTTONDOWN) {
                 SDL_GetMouseState(&mouseX, &mouseY);
-                char GuessedChar = tolower(keyboard.handleMouseClick(mouseX, mouseY));
+                char GuessedChar = tolower(keyboard.HandleMouseClick(mouseX, mouseY));
 
                 if (GuessedChar != '\0' && IsValidGuess(GuessedChar, game.GuessedLetters)) {
                     game.GuessedLetters += GuessedChar;
