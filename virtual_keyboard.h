@@ -48,7 +48,7 @@ void init() {
         }
     }
 
-    char handleMouseClick(int x, int y) {
+    char HandleMouseClick(int x, int y) {
         for (int i = 0; i < Keys.size(); ++i) {
             if (x >= Keys[i].x && x <= Keys[i].x + Keys[i].w && y >= Keys[i].y && y <= Keys[i].y + Keys[i].h) {
                 if (!KeyPressed[i]) {
