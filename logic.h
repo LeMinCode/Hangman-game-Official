@@ -98,7 +98,7 @@ bool PlayGame(Graphics& graphics) {
     keyboard.init();
 
     TTF_Font* font = graphics.loadFont("assets/Purisa-BoldOblique.ttf", 40);
-    SDL_Color textColor = {255, 255, 255};
+    SDL_Color textColor = {0, 0, 0};
 
     while (game.WrongGuessCount < game.MaxTries) {
         graphics.prepareScene(nullptr);
@@ -109,7 +109,7 @@ bool PlayGame(Graphics& graphics) {
             ("Remaining attempts: " + to_string(game.MaxTries - game.WrongGuessCount)).c_str(),
             font, textColor);
         if (remainingText) {
-            graphics.renderTexture(remainingText, 10, 10);
+            graphics.renderTexture(remainingText, 100, 600);
             SDL_DestroyTexture(remainingText);
         }
 
