@@ -106,8 +106,7 @@ bool PlayGame(Graphics& graphics) {
         renderWordProgress(graphics, game.word, game.guessed);
 
         SDL_Texture* remainingText = graphics.renderText(
-            ("Remaining attempts: " + to_string(game.MaxTries - game.WrongGuessCount)).c_str(),
-            font, textColor);
+            ("Remaining attempts: " + to_string(game.MaxTries - game.WrongGuessCount)).c_str(), font, textColor);
         if (remainingText) {
             graphics.renderTexture(remainingText, 100, 600);
             SDL_DestroyTexture(remainingText);
